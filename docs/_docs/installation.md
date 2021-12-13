@@ -1,20 +1,20 @@
 ---
-title: Installation
+title: 安装
 description: Official guide to install Jekyll on macOS, GNU/Linux or Windows.
 permalink: /docs/installation/
 ---
 
-Jekyll is a [Ruby Gem]({{ '/docs/ruby-101/#gems' | relative_url }}) that can be installed on most systems.
+Jekyll 是一个可以安装到大多数系统里的 [Ruby Gem]({{ '/docs/ruby-101/#gems' | relative_url }})。
 
-## Requirements
+## 需求
 
-* [Ruby](https://www.ruby-lang.org/en/downloads/) version **{{ site.data.ruby.min_version }}** or higher, including all development headers (check your Ruby version using `ruby -v`)
-* [RubyGems](https://rubygems.org/pages/download) (check your Gems version using `gem -v`)
-* [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/) (check versions using `gcc -v`,`g++ -v`,  and `make -v`)
+* [Ruby](https://www.ruby-lang.org/en/downloads/) **{{ site.data.ruby.min_version }}** 版本或更高，包括所有的开发头文件（检查 Ruby 版本使用 `ruby -v`）
+* [RubyGems](https://rubygems.org/pages/download) （检查您的 Gem 版本用 `gem -v`）
+* [GCC](https://gcc.gnu.org/install/) 和 [Make](https://www.gnu.org/software/make/) （检查版本用  `gcc -v`，`g++ -v`，和 `make -v`）
 
-## Guides
+## 指南
 
-For detailed install instructions, follow the guide for your operating system.
+获取更多安装细节，根据操作系统不同选择相关说明。
 
 * [macOS]({{ '/docs/installation/macos/' | relative_url }})
 * [Ubuntu]({{ '/docs/installation/ubuntu/' | relative_url }})

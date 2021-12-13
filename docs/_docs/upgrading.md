@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Upgrading
+title: 升级
 permalink: /docs/upgrading/
 ---
 

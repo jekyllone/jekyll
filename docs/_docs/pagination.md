@@ -1,5 +1,5 @@
 ---
-title: Pagination
+title: 分页
 permalink: /docs/pagination/
 ---
 

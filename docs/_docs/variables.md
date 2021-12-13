@@ -1,5 +1,5 @@
 ---
-title: Variables
+title: 变量
 permalink: /docs/variables/
 ---
 

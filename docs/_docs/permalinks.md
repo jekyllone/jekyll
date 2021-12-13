@@ -1,5 +1,5 @@
 ---
-title: Permalinks
+title: 永久链接
 permalink: /docs/permalinks/
 ---
 

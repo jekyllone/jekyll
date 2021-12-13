@@ -1,5 +1,5 @@
 ---
-title: Liquid
+title: Liquid 模板语言
 permalink: /docs/liquid/
 redirect_from: "/docs/templates/"
 ---

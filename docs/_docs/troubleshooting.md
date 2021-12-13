@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: 解惑
 permalink: /docs/troubleshooting/
 ---
 

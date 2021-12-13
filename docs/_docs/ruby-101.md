@@ -1,23 +1,22 @@
 ---
-title: Ruby 101
+title: Ruby 基础
 permalink: /docs/ruby-101/
 ---
 
-Jekyll is written in Ruby. If you're new to Ruby, this page helps you learn some of the terminology.
+Jekyll 基于 Ruby。如果您没有接触过 Ruby，那么本页面将帮助您学习一些基础知识。
 
 ## Gems
 
-Gems are code you can include in Ruby projects. Gems package specific functionality. You can share gems across multiple projects or with other people. 
-Gems can perform actions like:
+Gem 是可以导入到 Ruby 项目内使用的代码。Gem 都具有特定功能，可以在多个项目或者跟其他人分享。Gem 可以执行：
 
-* Converting a Ruby object to JSON
-* Pagination
-* Interacting with APIs such as GitHub
+* 转换 Ruby 对象为 JSON
+* 分页
+* 利用 API 集成到其他项目，例如 GitHub
 
-Jekyll is a gem. Many Jekyll [plugins]({{ '/docs/plugins/' | relative_url }}) are also gems, including
-[jekyll-feed](https://github.com/jekyll/jekyll-feed),
-[jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) and
-[jekyll-archives](https://github.com/jekyll/jekyll-archives).
+Jekyll 就是一个 Gem。很多 Jekyll [插件]({{ '/docs/plugins/' | relative_url }})也是 Gem，例如
+[jekyll-feed](https://github.com/jekyll/jekyll-feed)，
+[jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) 和
+[jekyll-archives](https://github.com/jekyll/jekyll-archives)。
 
 ## Gemfile
 

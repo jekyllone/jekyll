@@ -1,5 +1,5 @@
 ---
-title: Layouts
+title: 布局
 description: placeholder
 permalink: /docs/layouts/
 ---

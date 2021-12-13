@@ -1,5 +1,5 @@
 ---
-title: Data Files
+title: 数据文件
 permalink: /docs/datafiles/
 ---
 

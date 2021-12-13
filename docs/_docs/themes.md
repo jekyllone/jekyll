@@ -1,5 +1,5 @@
 ---
-title: Themes
+title: 主题版式
 permalink: /docs/themes/
 ---
 

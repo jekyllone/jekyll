@@ -1,5 +1,5 @@
 ---
-title:  Command Line Usage
+title:  命令行用法
 permalink: /docs/usage/
 ---
 

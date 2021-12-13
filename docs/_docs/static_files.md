@@ -1,5 +1,5 @@
 ---
-title: Static Files
+title: 静态文件
 permalink: /docs/static-files/
 ---
 A static file is a file that does not contain any front matter. These

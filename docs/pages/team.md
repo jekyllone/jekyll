@@ -1,20 +1,19 @@
 ---
 layout: page
-title: The Jekyll Team
+title: Jekyll 团队
 permalink: /team/
 ---
 
-## Core Team
+## 核心团队
 
-_The Jekyll Core Team's responsibility is to ensure the development and
-community around the Jekyll ecosystem thrive._
+_Jekyll 核心团队的职责是确保 Jekyll 开发和社区的生态系统蓬勃发展。_
 
 * Ashwin (@ashmaroli)
 * Matt (@mattr-)
 
-## Emeritus Core Team Members
+## 名誉核心团队成员
 
-_Emeritus Core Team Members were once members of Jekyll's Core Team._
+_名誉核心团队成员是曾经的 Jekyll 核心团队。_
 
 * Alfred (@alfredxing)
 * Frank (@DirtyF)

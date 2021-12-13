@@ -1,12 +1,12 @@
 ---
 layout: step
-title: Front Matter
+title: 前置参数
 position: 3
 ---
-Front matter is a snippet of [YAML](http://yaml.org/) placed between two
-triple-dashed lines at the start of a file.
+前置参数是一段 [YAML](http://yaml.org/) 代码片段，通常置于文件开始处的两段三
+连接线之间。
 
-You can use front matter to set variables for the page:
+您可以使用前置参数设置页面变量：
 
 ```yaml
 ---
@@ -14,8 +14,8 @@ my_number: 5
 ---
 ```
 
-You can call front matter variables in Liquid using the `page` variable. For
-example, to output the value of the `my_number` variable above:
+您可以使用 `page` 变量在 Liquid 中调用前置变量。
+例如，输出上面 `my_number` 变量的值：
 
 {% raw %}
 ```liquid
@@ -23,9 +23,9 @@ example, to output the value of the `my_number` variable above:
 ```
 {% endraw %}
 
-## Use front matter
+## 使用前置变量
 
-Change the `<title>` on your site to use front matter:
+使用前置变量改变站点的 `<title>`：
 
 {% raw %}
 ```liquid
@@ -46,13 +46,13 @@ title: Home
 {% endraw %}
 
 {: .note .info }
-You _must_ include front matter on the page for Jekyll to process any Liquid tags on it. 
+要使 Jekyll 处理页面的任何 Liquid tag 都 _必须_ 包含前置参数。
 
-To make Jekyll process a page without defining variables in the front matter, use:
+使 Jekyll 处理在前置参数中没有定义变量的页面，也需要三连线：
 
 ```yaml
 ---
 ---
 ```
 
-Next, you'll learn more about layouts and why your pages use more source code than plain HTML.
+接下来，您将学到关于布局和使用源码多于 HTML 的原因。

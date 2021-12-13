@@ -1,16 +1,15 @@
 ---
 layout: step
-title: Layouts
+title: 布局
 position: 4
 ---
-Jekyll supports [Markdown](https://daringfireball.net/projects/markdown/syntax)
-in addition to HTML when building pages. Markdown is a great choice for pages with a simple
-content structure (just paragraphs, headings and images), as it's less verbose
-than raw HTML. 
+Jekyll 构建页面时除了 HTML 也支持 [Markdown](https://daringfireball.net/projects/markdown/syntax)。对于内容结构相对简单（只有段落、标题和图像）的页
+面而言，Markdown 是一个绝佳选择，因为使用 Markdown 绝对要比用 HTML 少写
+很多代码。
 
-Create a new Markdown file named `about.md` in your site's root folder. 
+在您的站点根文件夹下创建叫做 `about.md` 的新 Markdown 文件。
 
-You could copy the contents of `index` and modify it for the About page. However,
+您可以复制 `index` 的内容并修改其为 About 页面内容。但是，这会创建重复的代码，必须为您添加到站点的每个新页面自定义这些代码。
 this creates duplicate code that has to be customized for each new page you add
 to your site. 
 

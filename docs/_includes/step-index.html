@@ -5,18 +5,18 @@
     <div class="section-nav">
       <div class="left align-right">
         {% if forloop.first -%}
-          <span class="prev disabled">Back</span>
+          <span class="prev disabled">返回</span>
         {% else -%}
           {% assign previous = forloop.index0 | minus: 1 -%}
-          <a href="{{ docs[previous].url }}" class="prev">Back</a>
+          <a href="{{ docs[previous].url | relative_url }}" class="prev">返回</a>
         {% endif -%}
       </div>
       <div class="right align-left">
       {% if forloop.last -%}
-        <span class="next disabled">Next</span>
+        <span class="next disabled">继续</span>
       {% else -%}
         {% assign next = forloop.index0 | plus: 1 -%}
-        <a href="{{ docs[next].url }}" class="next">Next</a>
+        <a href="{{ docs[next].url | relative_url }}" class="next">继续</a>
       {% endif -%}
       </div>
     </div>
@@ -27,7 +27,7 @@
 
 <ol class="step-nav">
   {% for step in docs -%}
-  <li {%- if step.url == page.url %} class="current"{% endif %}><a href="{{ step.url }}">
+  <li {%- if step.url == page.url %} class="current"{% endif %}><a href="{{ step.url | relative_url }}">
     {{- step.title -}}
   </a></li>
   {% endfor -%}

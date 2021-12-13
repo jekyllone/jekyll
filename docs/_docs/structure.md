@@ -1,5 +1,5 @@
 ---
-title: Directory Structure
+title: 目录结构
 permalink: /docs/structure/
 ---
 A basic Jekyll site usually looks something like this:

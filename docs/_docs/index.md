@@ -1,55 +1,53 @@
 ---
-title: Quickstart
+title: 快速开始
 permalink: /docs/
 redirect_from:
   - /docs/home/
   - /docs/quickstart/
   - /docs/extras/
 ---
-Jekyll is a static site generator. It takes text written in your
-favorite markup language and uses layouts to create a static website. You can
-tweak the site's look and feel, URLs, the data displayed on the page, and more. 
+Jekyll 是一款静态站点生成程序——您只需用自己喜欢的标记语言书写内容和布局框架，Jekyll 会将其转换为静态网站。当然，您可以随意修改网站的样式、感觉、URL和页面数据等。
 
-## Prerequisites
+## 预装软件
 
-Jekyll requires the following:
+Jekyll 需要：
 
-* Ruby version **{{ site.data.ruby.min_version }}** or higher
+* Ruby **{{ site.data.ruby.min_version }}** 版本或更高
 * RubyGems
-* GCC and Make
+* GCC 和 Make
 
-See [Requirements]({{ '/docs/installation/#requirements' | relative_url }}) for guides and details.
+查阅[需求]({{ '/docs/installation/#requirements' | relative_url }})获取指南和详细细节。
 
-## Instructions
+## 说明
 
-1. Install all [prerequisites]({{ '/docs/installation/' | relative_url }}).
-2. Install the jekyll and bundler [gems]({{ '/docs/ruby-101/#gems' | relative_url }}).
+1. 安装所有[预装软件]({{ '/docs/installation/' | relative_url }})。
+2. 安装 jekyll 和 bundler [gem]({{ '/docs/ruby-101/#gems' | relative_url }})。
 ```sh
 gem install jekyll bundler
 ```
-3. Create a new Jekyll site at `./myblog`.
+3. 在 `./myblog` 创建新 Jekyll 站点。
 ```sh
 jekyll new myblog
 ```
-4. Change into your new directory.
+4. 进入新目录。
 ```sh
 cd myblog
 ```
-5. Build the site and make it available on a local server.
+5. 构建站点，启用本地服务器。
 ```sh
 bundle exec jekyll serve
 ```
-6. Browse to [http://localhost:4000](http://localhost:4000){:target="_blank"}
+6. 查看 [http://localhost:4000](http://localhost:4000){:target="_blank"}
 
 {: .note .warning}
-If you are using Ruby version 3.0.0 or higher, step 5 [may fail](https://github.com/github/pages-gem/issues/752). You may fix it by adding `webrick` to your dependencies: `bundle add webrick`
+如果您使用 Ruby 3.0.0 版本或更高，第 5 步[可能出错](https://github.com/github/pages-gem/issues/752)。您可以通过添加 `webrick` 来修复： `bundle add webrick`
 
 {: .note .info}
-Pass the `--livereload` option to `serve` to automatically refresh the page with each change you make to the source files: `bundle exec jekyll serve --livereload`
+添加参数 `--livereload` 给 `serve` 就可以在数据更新时自动更新页面： `bundle exec jekyll serve --livereload`
 
 
-If you encounter any errors during this process, check that you have installed all the prerequisites in [Requirements]({{ '/docs/installation/#requirements' | relative_url }}). 
-If you still have issues, see [Troubleshooting]({{ '/docs/troubleshooting/#configuration-problems' | relative_url }}).
+如果这个过程中您遇到任何错误，您需要仔细检查一下您是否安装了所有[需求]({{ '/docs/installation/#requirements' | relative_url }})里提到的依赖软件。 
+如果您还有问题，请查阅[故障排除]({{ '/docs/troubleshooting/#configuration-problems' | relative_url }})。
 
 {: .note .info}
-Installation varies based on your operating system. See our [guides]({{ '/docs/installation/#guides' | relative_url }}) for OS-specific instructions.
+不同的操作系统安装方法不尽相同。查阅我们的[指南]({{ '/docs/installation/#guides' | relative_url }})获取基于不同操作系统的说明。

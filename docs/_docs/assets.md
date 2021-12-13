@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: 资源
 permalink: /docs/assets/
 ---
 

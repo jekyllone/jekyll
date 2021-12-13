@@ -1,65 +1,55 @@
 ---
 layout: step
-title: Setup
-menu_name: Step by Step Tutorial
+title: 安装
+menu_name: 手把手教程
 position: 1
 ---
-Welcome to Jekyll's step-by-step tutorial. This tutorial takes
-you from having some front-end web development experience to building your
-first Jekyll site from scratch without relying on the default gem-based theme.
+欢迎使用 Jekyll 手把手教程。本教程将帮助您从一些基本前端开发经验到能够构建第一个 Jekyll 站点（不依赖 GEM 主题版式）。
 
-## Installation
+## 安装
 
-Jekyll is a Ruby gem. First, install Ruby on your machine. 
-Go to [Installation]({{ '/docs/installation/' | relative_url }}) and follow the
-instructions for your operating system.
+Jekyll 是一个 Ruby 的 Gem。首先，在计算机上安装 Ruby。查阅[安装]({{ '/docs/installation/' | relative_url }})说明根据您的操作系统进行相关操作。
 
-With Ruby installed, install Jekyll from the terminal:
+安装完 Ruby，再从终端安装 Jekyll：
 
 ```sh
 gem install jekyll bundler
 ```
 
-Create a new `Gemfile` to list your project's dependencies:
+创建新 `Gemfile` 文件（用于解决项目依赖软件）：
 
 ```sh
 bundle init
 ```
 
-Edit the `Gemfile` in a text editor and add jekyll as a dependency:
+在文本编辑器中编辑 `Gemfile`，添加 jekyll：
 
 ```ruby
 gem "jekyll"
 ```
 
-Run `bundle` to install jekyll for your project.
+运行 `bundle` 安装 jekyll。
 
-You can now prefix all jekyll commands listed in this tutorial with `bundle exec`
-to make sure you use the jekyll version defined in your `Gemfile`.
+现在您可以为本教程学到的所有 jekyll 命令添加 `bundle exec` 前缀，这样就可以
+确保使用的版本与 `Gemfile` 中设置的一致了。
 
-## Create a site
+## 创建站点
 
-It's time to create a site! Create a new directory for your site and name
-it whatever you want. Through the rest of this tutorial we'll refer to this
-directory as **root**.
+是时候该创建一个站点了！为您的站点创建一个新目录，目录名您可以随意设定。教
+程接下来的部分我们就称这个目录为 **root** 了。
 
-You can also initialize a Git repository here.
+您也可以将其初始化为一个 Git 仓库。
 
-One of the great things about Jekyll is there's no database. All content and
-site structure are files that a Git repository can version. Using a repository
-is optional but is recommended. You can learn more
-about using Git by reading the
-[Git Handbook](https://guides.github.com/introduction/git-handbook/).
+Jekyll 一大特点就是不需要数据库。所有内容和站点结构都是由可使用 Git 版本控制的文件。使用版本控制虽为可选但是推荐。您要学习更多关于 Git 的知识可以参阅 [Git 手册](https://guides.github.com/introduction/git-handbook/)。
 
-Let's add your first file. Create `index.html` in **root** with the following
-content:
+来添加第一个文件吧。在 **root** 文件夹内创建 `index.html`，内容如下：
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>首页</title>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -67,35 +57,28 @@ content:
 </html>
 ```
 
-## Build
+## 构建
 
-Since Jekyll is a static site generator, it has to build the site
-before we can view it. Run either of the following commands to build your site:
+因为 Jekyll 是一个静态站点生成程序，所以在它构建出站点之前我们是看不到站点的。运行下面任一命令来构建站点：
 
-* `jekyll build` - Builds the site and outputs a static site to a directory
-called `_site`.
-* `jekyll serve` - Does `jekyll build` and runs it on a local web server at `http://localhost:4000`, rebuilding the site any time you make a change.
+* `jekyll build` - 构建站点，在 `_site` 输出静态站点。
+* `jekyll serve` - 做 `jekyll build` 同样的事，然后运行可访问本地服务器，可
+在 `http://localhost:4000` 查看，在任何您修改数据后都可以重构站点。
 
 {: .note .info}
-When you're developing a site, use `jekyll serve`. To force the browser to refresh with every change, use `jekyll serve --livereload`.
-If there's a conflict or you'd like Jekyll to serve your development site at a different URL, use the `--host` and `--port` arguments,
-as described in the [serve command options]({{ '/docs/configuration/options/#serve-command-options' | relative_url }}).
+当您开发站点时，使用 `jekyll serve`。如果想要对于每次内容修改需要强制刷新浏览器，可以使用 `jekyll serve --livereload`。
+如果有冲突或者想要在 Jekyll 的开发站点使用不同的 URL，使用 `--host` 和 `--port` 参数可调整（参阅[服务命令选项]({{ '/docs/configuration/options/#serve-command-options' | relative_url }})）。
 
 {: .note .warning}
-The version of the site that `jekyll serve` builds in `_site` is not suited for deployment. Links and asset URLs in sites created
-with `jekyll serve` will use `https://localhost:4000` or the value set with command-line configuration, instead of the values set
-in [your site's configuration file]({{ '/docs/configuration/' | relative_url }}). To learn about how to build your site when it's
-ready for deployment, read the [Deployment]({{ '/docs/step-by-step/10-deployment/' | relative_url }}) section of this tutorial.
+用 `jekyll serve` 构建站点的 `_site` 不适合部署使用。用 `jekyll serve` 生成的站点链接和资产 URL 都是用 `https://localhost:4000` 或者相关的命令行设置值，而非[您的站点配置文件]({{ '/docs/configuration/' | relative_url }})中的值。学
+习更多站点部署知识，阅读本教程的[部署]({{ '/docs/step-by-step/10-deployment/' | relative_url }})部分。
 
 
-Run `jekyll serve` and go to
-<a href="http://localhost:4000" target="_blank" data-proofer-ignore>http://localhost:4000</a> in
-your browser. You should see "Hello World!".
+运行 `jekyll serve` 然后在浏览器中进入
+<a href="http://localhost:4000" target="_blank" data-proofer-ignore>http://localhost:4000</a>。您会看到 "Hello World!"。
 
-At this point, you might be thinking, "So what?". The only thing that happened was that Jekyll copied an
-HTML file from one place to another. 
+这时您可能会想，“就这？”。Jekyll 不过就是把 HTML 文件从一个地方复制到另一个地方吗？
 
-Patience, young grasshopper, there's
-still much to learn!
+冷静！少年。要学的东西还很多！
 
-Next. you'll learn about Liquid and templating.
+接下来，您会学到 Liquid 和模板知识。

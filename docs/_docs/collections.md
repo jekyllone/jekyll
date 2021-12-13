@@ -1,23 +1,21 @@
 ---
-title: Collections
+title: 专题
 permalink: /docs/collections/
 ---
 
-Collections are a great way to group related content like members of a team or
-talks at a conference.
+专题是组织相关内容的一个好方法，例如团队的会员资料或者会议的论文等。
 
-## Setup
+## 设置
 
-To use a Collection you first need to define it in your `_config.yml`. For
-example here's a collection of staff members:
+要使用专题需要先在 `_config.yml` 中设定。例如这里是一个员工专题：
 
 ```yaml
 collections:
   - staff_members
 ```
 
-In this case `collections` is defined as a sequence (i.e., array) with no additional metadata defined for each collection.
-You can optionally specify metadata for your collection by defining `collections` as a mapping (i.e., hashmap) instead of sequence, and then defining additional fields in it:
+此例中 `collections` 定义一个无附加元数据的序列（例如数组等）。当然，您也
+可以为专题 `collections`  定义一些基于映射元数据代替序列，例如：
 
 ```yaml
 collections:
@@ -26,34 +24,26 @@ collections:
 ```
 
 {: .note .info}
-When defining a collection as a sequence, its pages will not be rendered by
-default. To enable this, <code>output: true</code> must be specified on the
-collection, which requires defining the collection as a mapping. For more
-information, see the section <a href="#output">Output</a>.
+定义序列专题时，其页面默认不会被渲染。启用该功能，需要在映射专题中设置
+ <code>output: true</code> 。更多详细信息，请查阅<a href="#output">输出</a>。
 
 <div class="note">
-  <h5>Gather your collections {%- include docs_version_badge.html version="3.7.0" -%}</h5>
+  <h5>汇聚您的专题 {%- include docs_version_badge.html version="3.7.0" -%}</h5>
 
-  <p>You can optionally specify a directory to store all your collections in the same place with <code>collections_dir: my_collections</code>.</p>
+  <p>您可以选择使用 <code>collections_dir: my_collections</code> 来定义存储专题的目录。</p>
 
-  <p>Then Jekyll will look in <code>my_collections/_books</code> for the <code>books</code> collection, and
-  in <code>my_collections/_recipes</code> for the <code>recipes</code> collection.</p>
+  <p>然后 Jekyll 会在 <code>my_collections/_books</code> 寻找 <code>books</code> 专题，在 <code>my_collections/_recipes</code> 寻找 <code>recipes</code> 专题。</p>
 </div>
 
 <div class="note warning">
-  <h5>Be sure to move drafts and posts into custom collections directory</h5>
+  <h5>请务必将草稿和帖文移动到自定义专题目录中</h5>
 
-  <p>If you specify a directory to store all your collections in the same place with <code>collections_dir: my_collections</code>, then you will need to move your <code>_drafts</code> and <code>_posts</code> directory to <code>my_collections/_drafts</code> and <code>my_collections/_posts</code>. Note that, the name of your collections directory cannot start with an underscore (`_`).</p>
+  <p>如果您定一个专题目录 <code>collections_dir: my_collections</code> 来存储所有专题，那么就需要将您的 <code>_drafts</code> 和 <code>_posts</code> 目录也移入该专题目录内，如 <code>my_collections/_drafts</code> 和 <code>my_collections/_posts</code>。记住专题目录名字不能以下划线（`_`）开始。</p>
 </div>
 
-## Add content
+## 添加内容
 
-Create a corresponding folder (e.g. `<source>/_staff_members`) and add
-documents. Front matter is processed if the front matter exists, and everything
-after the front matter is pushed into the document's `content` attribute. If no front
-matter is provided, Jekyll will consider it to be a [static file]({{ '/docs/static-files/' | relative_url }})
-and the contents will not undergo further processing. If front matter is provided,
-Jekyll will process the file contents into the expected output.
+创建相关文件夹（例如 `<source>/_staff_members`）然后添加文档。如果有前置参数，则前置参数被处理，前置参数之后的所有内容被视为 `content` 参数的内容。如果没有前置参数，Jekyll 会将其视为[静态文件]({{ '/docs/static-files/' | relative_url }})，内容将不做更多处理。如果有前置参数，Jekyll 会如预期编译内容。
 
 Regardless of whether front matter exists or not, Jekyll will write to the destination
 directory (e.g. `_site`) only if `output: true` has been set in the collection's

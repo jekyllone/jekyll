@@ -1,4 +1,5 @@
 ---
+title: 渲染过程
 ---
 
 For any Jekyll site, a *build session* consists of discrete phases in the following order --- *setting up plugins,

@@ -1,5 +1,5 @@
 ---
-title: Blog Migrations
+title: 博客迁移
 permalink: /docs/migrations/
 ---
 

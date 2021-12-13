@@ -1,11 +1,11 @@
 ---
-title: Deployment
+title: 部署
 permalink: /docs/deployment/
 redirect_from: "/docs/deployment-methods/index.html"
 ---
 
-Sites built using Jekyll can be deployed in a large number of ways due to the static nature of the generated output. Here's some of the most common ways:
+Jekyll 构建的站点因为是静态站点的缘故，所有有很多的部署方法。主要方式有：
 
-* [Manually]({{ '/docs/deployment/manual/' | relative_url }})
-* [Automated]({{ '/docs/deployment/automated/' | relative_url }})
-* [Third Party]({{ '/docs/deployment/third-party/' | relative_url }})
+* [手动方法]({{ '/docs/deployment/manual/' | relative_url }})
+* [自动方法]({{ '/docs/deployment/automated/' | relative_url }})
+* [第三方方法]({{ '/docs/deployment/third-party/' | relative_url }})

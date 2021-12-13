@@ -1,11 +1,11 @@
 ---
-title: Jekyll on Linux
+title: 在其他 Linux 上安装 Jekyll
 permalink: /docs/installation/other-linux/
 ---
 
-Installation on other Linux distributions works similarly to installing on [Ubuntu](../ubuntu/).
+在其他 Linux 上的安装过程类似在 [Ubuntu](../ubuntu/) 上的安装过程。
 
-## Install prerequisites
+## 安装预装软件
 
 ### Fedora
 
@@ -55,6 +55,6 @@ sudo zypper install ruby-devel
 ```sh
 sudo swupd bundle-add ruby-basic
 ```
-## Install Jekyll
+## 安装 Jekyll
 
-Follow the instructions for [Ubuntu](../ubuntu/).
+安装过程同 [Ubuntu](../ubuntu/)。

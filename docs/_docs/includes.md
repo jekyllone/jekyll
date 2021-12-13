@@ -1,5 +1,5 @@
 ---
-title: Includes
+title: 包含
 permalink: /docs/includes/
 ---
 

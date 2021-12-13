@@ -1,16 +1,16 @@
 ---
-title: Community
+title: 社区
 permalink: /docs/community/
 redirect_from: "/help/index.html"
 ---
 
-## Jekyll Contributor Code of Conduct
+## Jekyll 贡献者行为准则
 
 As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
 
 Read the full [code of conduct]({{ '/docs/conduct/' | relative_url }})
 
-## Where to get support
+## 在哪里获得支持
 
 If you're looking for support for Jekyll, there are a lot of options:
 
@@ -22,7 +22,7 @@ There are a bunch of helpful community members on these services who are willing
 
 **Reminder: Jekyll's issue tracker is not a support forum.**
 
-## Ways to contribute
+## 贡献方式
 
 * [How to Contribute]({{ '/docs/contributing/' | relative_url }})
 * [How to file a bug]({{ '/docs/community/bug/' | relative_url }})
@@ -32,6 +32,6 @@ There are a bunch of helpful community members on these services who are willing
 
 [Watch videos]({{ '/jekyllconf/' | relative_url }}) from members of the Jekyll community speak about interesting use cases, tricks they’ve learned or meta Jekyll topics.
 
-## Jekyll on Twitter
+## Jekyll 在 Twitter
 
 The [official Jekyll Twitter account](https://twitter.com/jekyllrb).

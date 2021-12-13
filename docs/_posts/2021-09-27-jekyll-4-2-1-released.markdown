@@ -1,12 +1,12 @@
 ---
-title: "Jekyll 4.2.1 Released"
+title: "Jekyll 4.2.1 发布"
 date: 2021-09-27 14:45:46 +0530
 author: ashmaroli
 version: 4.2.1
 category: release
 ---
 
-Hello Jekyllers!
+Jekyller 们，大家好！
 
 The Jekyll team is happy to announce the release of `v4.2.1` which fixes a couple of
 regressions introduced in `v4.2.0` and another bug inherited from Jekyll 3.

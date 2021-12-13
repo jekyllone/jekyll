@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: 帖文
 permalink: /docs/posts/
 redirect_from:
   - /docs/drafts/

@@ -1,20 +1,18 @@
 ---
-title: Jekyll on Ubuntu
+title: 在 Ubuntu 上安装 Jekyll 
 permalink: /docs/installation/ubuntu/
 ---
 
-## Install dependencies
+## 安装依赖软件
 
-Install Ruby and other [prerequisites]({{ '/docs/installation/#requirements' | relative_url }}):
+安装 Ruby 和其他[预装软件]({{ '/docs/installation/#requirements' | relative_url }})：
 
 ```sh
 sudo apt-get install ruby-full build-essential zlib1g-dev
 ```
 
-Avoid installing RubyGems packages (called gems) as the root user. Instead, 
-set up a gem installation directory for your user account. The following
-commands will add environment variables to your `~/.bashrc` file to configure
-the gem installation path:
+尽量不要用 `root` 用户身份安装 RubyGems（通常称为 gem）包，而是使用您的常用
+用户账号目录来安装。配置 gem 安装路径可以用下面的命令添加环境变量到 `~/.bashrc` 文件：
 
 ```sh
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
@@ -23,10 +21,10 @@ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Finally, install Jekyll and Bundler:
+最后，安装 Jekyll 和 Bundler：
 
 ```sh
 gem install jekyll bundler
 ```
 
-That's it! You're ready to start using Jekyll.
+完毕！您准备好开始您的 Jekyll 之旅了吗？

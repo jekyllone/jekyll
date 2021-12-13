@@ -1,12 +1,12 @@
-# Jekyll docs site
+# Jekyll 中文文档站点
 
-This directory contains the code for the Jekyll docs site, [jekyllrb.com](https://jekyllrb.com/).
+此仓储包含 Jekyll 文档站点代码，[jekyllrb.com](https://jekyllrb.com/).
 
-## Contributing
+## 参与
 
 For information about contributing, see the [Contributing page](https://jekyllrb.com/docs/contributing/).
 
-## Running locally
+## 本地运行
 
 You can preview your contributions before opening a pull request by running from within the directory:
 
@@ -15,7 +15,7 @@ You can preview your contributions before opening a pull request by running from
 
 It's just a jekyll site, afterall! :wink:
 
-## Updating Font Awesome
+## 更新 Font Awesome
 
 1. Go to <https://icomoon.io/app/>
 2. Choose Import Icons and load `icomoon-selection.json`

@@ -1,5 +1,5 @@
 ---
-title: Markdown 101
+title: Markdown 基础
 permalink: /docs/markdown-101/
 ---
 
