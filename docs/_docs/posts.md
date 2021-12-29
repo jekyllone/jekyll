@@ -1,40 +1,36 @@
 ---
-title: 帖文
+title: 博文
 permalink: /docs/posts/
 redirect_from:
   - /docs/drafts/
 ---
 
-Blogging is baked into Jekyll. You write blog posts as text files and Jekyll
-provides everything you need to turn it into a blog.
+博客属性对于 Jekyll 而言可谓“与生俱来”。您只需负责编写博文，剩下的事情交给
+ Jekyll。
 
-## The Posts Folder
+## 博文文件夹
 
-The `_posts` folder is where your blog posts live. You typically write posts
-in [Markdown](https://daringfireball.net/projects/markdown/), HTML is
-also supported.
+文件夹 `_posts` 是放置博文的地方。您可以编写 [Markdown](https://daringfireball.net/projects/markdown/) 格式或者 HTML 
+格式的文章。
 
-## Creating Posts
+## 新建博文
 
-To create a post, add a file to your `_posts` directory with the following
-format:
+新建博文，就是在 `_posts` 文件夹新建一个文件，文件名格式如下：
 
 ```
 YEAR-MONTH-DAY-title.MARKUP
 ```
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit
-numbers, and `MARKUP` is the file extension representing the format used in the
-file. For example, the following are examples of valid post filenames:
+`YEAR` 是四位数，`MONTH` 和 `DAY` 是两位数，`MARKUP` 是文件扩展名（代表文件内
+容使用的格式）。例如，下面都是有效的文件名：
 
 ```
 2011-12-31-new-years-eve-is-awesome.md
 2012-09-12-how-to-write-a-blog.md
 ```
 
-All blog post files must begin with [front matter](/docs/front-matter/) which is
-typically used to set a [layout](/docs/layouts/) or other meta data. For a simple
-example this can just be empty:
+所有博文必须以[前置参数](/docs/front-matter/ "front matter")开始，参数中可以
+设置[布局](/docs/layouts/ "layout")或者其他元数据。简单参数设置如下：
 
 ```markdown
 ---
@@ -50,54 +46,48 @@ I hope you like it!
 ```
 
 <div class="note">
-  <h5>ProTip™: Link to other posts</h5>
+  <h5>专家提示™：链接到其他博文</h5>
   <p>
-    Use the <a href="/docs/liquid/tags/#linking-to-posts"><code>post_url</code></a>
-    tag to link to other posts without having to worry about the URLs
-    breaking when the site permalink style changes.
+    使用 <a href="/docs/liquid/tags/#linking-to-posts"><code>post_url</code></a>
+    标签链接到其他博文，则无需担心因为站点永久链接方式改变而导致的链接崩溃。
   </p>
 </div>
 
 <div class="note info">
-  <h5>Be aware of character sets</h5>
+  <h5>了解字符编码</h5>
   <p>
-    Content processors can modify certain characters to make them look nicer.
-    For example, the <code>smart</code> extension in Redcarpet converts standard,
-    ASCII quotation characters to curly, Unicode ones. In order for the browser
-    to display those characters properly, define the charset meta value by
-    including <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> in the
-    <code>&lt;head&gt;</code> of your layout.
+    内容处理器可以修改特定字符使它们看起来更好看一些。例如，Redcarpet 的
+     <code>smart</code> 扩展库会将 ASCII 的引号转为 Unicode 中的更弯曲一些的
+    引号。为了在浏览器中正确显示这些字符，需要在页面布局的 <code>&lt;head&gt;</code>
+    部分包含 <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> 元数据设置。
   </p>
 </div>
 
-## Including images and resources
+## 包含图像和资源
 
-At some point, you'll want to include images, downloads, or other
-digital assets along with your text content. One common solution is to create
-a folder in the root of the project directory called something like `assets`,
-into which any images, files or other resources are placed. Then, from within
-any post, they can be linked to using the site’s root as the path for the asset
-to include. The best way to do this depends on the way your site’s (sub)domain
-and path are configured, but here are some simple examples in Markdown:
+有时页面需要包含一些图像、下载或者其他一些跟内容相关的数字资源。常用做法就是
+在根目录创建一个叫做 `assets` 的文件夹，把文件、图像和其他资源放置其中。然后，
+从博文中使用根目录路径引用它们。最好的使用方式依赖站点域名和路径的配置，但是
+在 Markdown 也可以使用简单的方式：
 
-Including an image asset in a post:
+在一个博文中包含一个图像：
 
 ```markdown
-... which is shown in the screenshot below:
-![My helpful screenshot](/assets/screenshot.jpg)
+... 下面显示截屏：
+![我的有用的截屏](/assets/screenshot.jpg)
 ```
 
-Linking to a PDF for readers to download:
+链接一个用于下载的 PDF 文件：
 
 ```markdown
-... you can [get the PDF](/assets/mydoc.pdf) directly.
+... 您可以直接[获取 PDF](/assets/mydoc.pdf)。
 ```
 
-## Displaying an index of posts
+## 显示博文索引
 
-Creating an index of posts on another page should be easy thanks to
-[Liquid](https://docs.shopify.com/themes/liquid/basics) and its tags. Here’s a
-simple example of how to create a list of links to your blog posts:
+在另一个单独的页面创建博文索引得宜于
+[Liquid](https://docs.shopify.com/themes/liquid/basics) 和它的标签。这是一个如
+何创建您的博文链接清单的简单示例：
 
 {% raw %}
 ```liquid
@@ -111,36 +101,28 @@ simple example of how to create a list of links to your blog posts:
 ```
 {% endraw %}
 
-You have full control over how (and where) you display your posts,
-and how you structure your site. You should read more about [how templates
-work](/docs/templates/) with Jekyll if you want to know more.
+您可以全方位控制（如何以及在哪儿）显示您的博文以及如何架构您的网站。如果您
+需要更详细信息，可以查阅 Jekyll [模板如何工作](/docs/templates/)。
 
-Note that the `post` variable only exists inside the `for` loop above. If
-you wish to access the currently-rendering page/posts's variables (the
-variables of the post/page that has the `for` loop in it), use the `page`
-variable instead.
+注意 `post` 变量仅在 `for` 循环体内存在。如果您要访问当前页面/博文变量（博
+文/页面的 `for` 循环题内的变量），使用 `page` 变量。
 
-## Tags and Categories
+## 标签和分类
 
-Jekyll has first class support for *tags* and *categories* in blog posts.
+Jekyll 对博文中的 *tags* 和 *categories* 标签提供一流支持。
 
 ### Tags
 
-Tags for a post are defined in the post's front matter using either the key
-`tag` for a single entry or `tags` for multiple entries. <br/> Since Jekyll
-expects multiple items mapped to the key `tags`, it will automatically *split*
-a string entry if it contains whitespace. For example, while front matter
-`tag: classic hollywood` will be processed into a singular entity
-`"classic hollywood"`, front matter `tags: classic hollywood` will be processed
-into an array of entries `["classic", "hollywood"]`.
+Tags 在博文的前置参数中定义：单独的关键词用 `tag`；多个关键词用 `tags`。
+Jekyll 会映射 `tags` 到多个关键词，系统会自动以空格*分割*字符串。例如，前置
+参数中 `tag: classic hollywood` 会自动认定为一个词组 `"classic hollywood"`，
+而 `tags: classic hollywood` 会被处理为字符数组 `["classic", "hollywood"]`。
 
-Irrespective of the front matter key chosen, Jekyll stores the metadata mapped
-to the plural key which is exposed to Liquid templates.
+不管前置参数选择哪种方式，Jekyll 都会以单数形式存储映射用于 Liquid 模板调用。
 
-All tags registered in the current site are exposed to Liquid templates via
-`site.tags`. Iterating over `site.tags` on a page will yield another array with
-two items, where the first item is the name of the tag and the second item being
-*an array of posts* with that tag.
+当前站点的所有 Tag 通过 Liquid 模板语言的 `site.tags` 可以引用。通过页面的
+ `site.tags` 可以循环输出两项内容，第一项是 Tag 名，第二项是使用该 Tag 的
+*博文数组*。
 
 {% raw %}
 ```liquid
@@ -158,20 +140,15 @@ two items, where the first item is the name of the tag and the second item being
 
 ### Categories
 
-Categories of a post work similar to the tags above:
-  * They can be defined via the front matter using keys `category` or
-    `categories` (that follow the same logic as for tags)
-  * All categories registered in the site are exposed to Liquid templates via
-    `site.categories` which can be iterated over (similar to the loop for tags
-    above.)
+Categories 使用方法同上面的 tags 相似：
+  * 通过前置参数定义：`category` 或者 `categories` （逻辑同 tags）
+  * 站点所有分类可通过 Liquid 模板的 `site.categories` 循环引用（循环同 tags）
 
-*The similarity between categories and tags however, ends there.*
+*Categories 和 Tags 相似性到此为止。*
 
-Unlike tags, categories for posts can also be defined by a post's file path.
-Any directory above `_post` will be read-in as a category. For example,
-if a post is at path `movies/horror/_posts/2019-05-21-bride-of-chucky.markdown`,
-then `movies` and `horror` are automatically registered as categories for that
-post.
+不像 Tags，Categories 也可以通过博文的文件路径定义。`_post` 下的任何目录都可
+被看作目录。例如，如果一篇博文的路径是 `movies/horror/_posts/2019-05-21-bride-of-chucky.markdown`，
+那么 `movies` 和 `horror` 会自动被认定为该篇博文的目录。
 
 When the post also has front matter defining categories, they just get added to
 the existing list if not present already.
@@ -187,7 +164,7 @@ either
 `movies/horror/classic/hollywood/2019/05/21/bride-of-chucky.html` respectively.
 
 
-## Post excerpts
+## 博文摘要
 
 You can access a snippet of a posts's content by using `excerpt` variable on a
 post. By default this is the first paragraph of content in the post, however it
@@ -221,7 +198,7 @@ Here's an example of outputting a list of blog posts with an excerpt:
 ```
 {% endraw %}
 
-## Drafts
+## 草稿
 
 Drafts are posts without a date in the filename. They're posts you're still
 working on and don't want to publish yet. To get up and running with drafts,
