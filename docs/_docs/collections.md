@@ -38,19 +38,18 @@ collections:
 <div class="note warning">
   <h5>请务必将草稿和帖文移动到自定义专题目录中</h5>
 
-  <p>如果您定一个专题目录 <code>collections_dir: my_collections</code> 来存储所有专题，那么就需要将您的 <code>_drafts</code> 和 <code>_posts</code> 目录也移入该专题目录内，如 <code>my_collections/_drafts</code> 和 <code>my_collections/_posts</code>。记住专题目录名字不能以下划线（`_`）开始。</p>
+  <p>如果您定一个专题目录 <code>collections_dir: my_collections</code> 来存储所有专题，那么就需要将您的 <code>_drafts</code> 和 <code>_posts</code> 目录也移入该专题目录内，如 <code>my_collections/_drafts</code> 和 <code>my_collections/_posts</code>。记住专题目录名字不能以下划线（<code>_</code>）开始。</p>
 </div>
 
 ## 添加内容
 
-创建相关文件夹（例如 `<source>/_staff_members`）然后添加文档。如果有前置参数，则前置参数被处理，前置参数之后的所有内容被视为 `content` 参数的内容。如果没有前置参数，Jekyll 会将其视为[静态文件]({{ '/docs/static-files/' | relative_url }})，内容将不做更多处理。如果有前置参数，Jekyll 会如预期编译内容。
+创建相关文件夹（例如 `<source>/_staff_members`）然后添加文档。如果有前置参数，则前置参数被解析，前置参数之后的所有内容被视为 `content` 参数的内容。如果没有前置参数，Jekyll 会将其视为[静态文件]({{'/docs/static-files/' | relative_url }})，内容将不做更多处理。如果有前置参数，Jekyll 会如预期编译内容。
 
-Regardless of whether front matter exists or not, Jekyll will write to the destination
-directory (e.g. `_site`) only if `output: true` has been set in the collection's
-metadata.
+不管前置参数是否存在，只要专题元数据中设置了 `output: true`，Jekyll 就会将所
+有文档输出到指定目录（例如 `_site`）。
 
-For example here's how you would add a staff member to the collection set above.
-The filename is `./_staff_members/jane.md` with the following content:
+例如，这就是向上面所述如何添加一个成员会员到专题。
+文件名是 `./_staff_members/jane.md`，内容如下：
 
 ```markdown
 ---
@@ -61,20 +60,18 @@ Jane has worked on Jekyll for the past *five years*.
 ```
 
 <em>
-  Do note that in spite of being considered as a collection internally, the above
-  doesn't apply to [posts](/docs/posts/). Posts with a valid filename format will be
-  marked for processing even if they do not contain front matter.
+  切记，尽管在内部被视为一个专题，但是这种设置不适用于[博文](/docs/posts/)。
+  文件名有效的博文即使不包含前置参数也会被解析器解析。
 </em>
 
 <div class="note info">
-  <h5>Be sure to name your directories correctly</h5>
+  <h5>确保正确命名目录</h5>
   <p>
-The folder must be named identically to the collection you defined in
-your <code>_config.yml</code> file, with the addition of the preceding <code>_</code> character.
+文件夹名称必须与 <code>_config.yml</code> 文件中定义的一致，并且前面添加 <code>_</code> 符号。
   </p>
 </div>
 
-## Output
+## 输出
 
 Now you can iterate over `site.staff_members` on a page and output the content
 for each staff member. Similar to posts, the body of the document is accessed
@@ -114,19 +111,19 @@ You can link to the generated page using the `url` attribute:
 ```
 {% endraw %}
 
-## Permalinks
+## 永久链接
 
 There are special [permalink variables for collections]({{ '/docs/permalinks/#collections' | relative_url }}) to
 help you control the output url for the entire collection.
 
-## Custom Sorting of Documents {%- include docs_version_badge.html version="4.0" -%}
+## 自定义排序文档 {%- include docs_version_badge.html version="4.0" -%}
 {: #custom-sorting-of-documents}
 
 By default, two documents in a collection are sorted by their `date` attribute when both of them have the `date` key in their front matter. However, if either or both documents do not have the `date` key in their front matter, they are sorted by their respective paths.
 
 You can control this sorting via the collection's metadata.
 
-### Sort By Front Matter Key
+### 按前置参数关键词排序
 
 Documents can be sorted based on a front matter key by setting a `sort_by` metadata to the front matter key string. For example,
 to sort a collection of tutorials based on key `lesson`, the configuration would be:
@@ -141,7 +138,7 @@ The documents are arranged in the increasing order of the key's value. If a docu
 then that document is placed immediately after sorted documents. When multiple documents do not have the front matter key defined,
 those documents are sorted by their dates or paths and then placed immediately after the sorted documents.
 
-### Manually Ordering Documents
+### 手动排序文档
 
 You can also manually order the documents by setting an `order` metadata with **the filenames listed** in the desired order.
 For example, a collection of tutorials would be configured as:
@@ -171,9 +168,9 @@ collections:
 
 If both metadata keys have been defined properly, `order` list takes precedence.
 
-## Liquid Attributes
+## Liquid 属性
 
-### Collections
+### 专题
 
 Collections are also available under `site.collections`, with the metadata
 you specified in your `_config.yml` (if present) and the following information:
@@ -254,7 +251,7 @@ you specified in your `_config.yml` (if present) and the following information:
 </div>
 
 <div class="note info">
-  <h5>A Hard-Coded Collection</h5>
+  <h5>硬编码专题</h5>
   <p>In addition to any collections you create yourself, the
   <code>posts</code> collection is hard-coded into Jekyll. It exists whether
   you have a <code>_posts</code> directory or not. This is something to note
@@ -265,7 +262,7 @@ you specified in your `_config.yml` (if present) and the following information:
 </div>
 
 <div class="note info">
-  <h5>Collections and Time</h5>
+  <h5>专题和时间</h5>
   <p>Except for documents in hard-coded default collection <code>posts</code>, all documents in collections
     you create, are accessible via Liquid irrespective of their assigned date, if any, and therefore renderable.
   </p>
@@ -278,7 +275,7 @@ you specified in your `_config.yml` (if present) and the following information:
   </p>
 </div>
 
-### Documents
+### 文档
 
 In addition to any front matter provided in the document's corresponding
 file, each document has the following attributes:

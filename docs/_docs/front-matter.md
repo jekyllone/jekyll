@@ -4,10 +4,7 @@ permalink: /docs/front-matter/
 redirect_from: /docs/frontmatter/index.html
 ---
 
-Any file that contains a [YAML](https://yaml.org/) front matter block will be
-processed by Jekyll as a special file. The front matter must be the first thing
-in the file and must take the form of valid YAML set between triple-dashed
-lines. Here is a basic example:
+Jekyll 会处理任何包含 [YAML](https://yaml.org/) 格式前置参数的文件。前置参数必须是文件中最先出现且被三横线包围的有效 YAML 。基本格式如下示例：
 
 ```yaml
 ---
@@ -16,43 +13,37 @@ title: Blogging Like a Hacker
 ---
 ```
 
-Between these triple-dashed lines, you can set predefined variables (see below
-for a reference) or even create custom ones of your own. These variables will
-then be available for you to access using Liquid tags both further down in the
-file and also in any layouts or includes that the page or post in question
-relies on.
+三横线之间，您可以设置预定义变量（参考下面展示）或者创建自定义变量。这些
+变量可供文件后面的 Liquid 标签或者其他任何页面/博文的布局或模板进行引用。
 
 <div class="note warning">
-  <h5>UTF-8 Character Encoding Warning</h5>
+  <h5>UTF-8 字符编码警告</h5>
   <p>
-    If you use UTF-8 encoding, make sure that no <code>BOM</code> header
-    characters exist in your files or very, very bad things will happen to
-    Jekyll. This is especially relevant if you’re running
-    <a href="{{ '/docs/installation/windows/' | relative_url }}">Jekyll on Windows</a>.
+    如果您使用 UTF-8 编码，确保文件中没有 <code>BOM</code> 字符存在，否
+    则 Jekyll 可能崩溃。尤其是如果您在
+    <a href="{{ '/docs/installation/windows/' | relative_url }}">Windows 上运行 Jekyll</a> 时要注意。
   </p>
 </div>
 
 <div class="note">
-  <h5>Front Matter Variables Are Optional</h5>
+  <h5>前置参数变量可选</h5>
   <p>
-    If you want to use <a href="{{ '/docs/variables/' | relative_url }}">Liquid tags and variables</a>
-    but don’t need anything in your front matter, just leave it empty! The set
-    of triple-dashed lines with nothing in between will still get Jekyll to
-    process your file. (This is useful for things like CSS and RSS feeds!)
+    如果您想使用 <a href="{{ '/docs/variables/' | relative_url }}">Liquid 表天和变量</a>
+    但不需要前置参数中的任何东西，可以留空！两端三横线之间即使什么都没有
+    也可以告诉 Jekyll 要处理该文件。（这对于 CSS 和 RSS feed 文件来说很重要！）
   </p>
 </div>
 
-## Predefined Global Variables
+## 预定义全局变量
 
-There are a number of predefined global variables that you can set in the
-front matter of a page or post.
+页面或博文的前置参数中可以设置很多全局变量。
 
 <div class="mobile-side-scroller">
 <table>
   <thead>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <th>变量</th>
+      <th>简介</th>
     </tr>
   </thead>
   <tbody>
@@ -63,23 +54,18 @@ front matter of a page or post.
       <td>
         <p>
 
-          If set, this specifies the layout file to use. Use the layout file
-          name without the file extension. Layout files must be placed in the
-          <code>_layouts</code> directory.
+          如设置则指定所用布局文件。指定布局文件无需文件扩展名。布局文件
+          必须在 <code>_layouts</code> 文件夹内。
 
         </p>
         <ul>
           <li>
-            Using <code>null</code> will produce a file without using a layout
-            file. This is overridden if the file is a post/document and has a
-            layout defined in the <a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}">
-            front matter defaults</a>.
+            设定 <code>null</code> 将不使用布局。如果文件是博文/文档且在<a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}">默认前置参数</a>中已设置布局，则此设置会被覆盖。
           </li>
           <li>
-            Starting from version 3.5.0, using <code>none</code> in a post/document will
-            produce a file without using a layout file regardless of front matter defaults.
-            Using <code>none</code> in a page will cause Jekyll to attempt to
-            use a layout named "none".
+            从 3.5.0 版开始，在博文/文档中使用 <code>none</code> 不管默认
+            前置参数设置与否都会生成无布局文件。页面使用 <code>none</code>
+            会导致 Jekyll 寻找叫做 "none" 的布局文件。
           </li>
         </ul>
       </td>
@@ -91,9 +77,7 @@ front matter of a page or post.
       <td>
         <p>
 
-          If you need your processed blog post URLs to be something other than
-          the site-wide style (default <code>/year/month/day/title.html</code>), then you can set
-          this variable and it will be used as the final URL.
+          如果您需要自行设定博文的个性 URL，而不使用站点默认样式（默认 <code>/year/month/day/title.html</code>），那么系统会最终使用您设定的样式。
 
         </p>
       </td>
@@ -104,8 +88,7 @@ front matter of a page or post.
       </td>
       <td>
         <p>
-          Set to false if you don’t want a specific post to show up when the
-          site is generated.
+          如果您不想让某些博文在站点编译时公开发布，可以设置其为 <code>false</code>。
         </p>
       </td>
     </tr>
@@ -114,18 +97,17 @@ front matter of a page or post.
 </div>
 
 <div class="note">
-  <h5>Render Posts Marked As Unpublished</h5>
+  <h5>渲染博文标记为未发布</h5>
   <p>
-    To preview unpublished pages, run `jekyll serve` or `jekyll build`
-    with the `--unpublished` switch. Jekyll also has a handy <a href="{{ '/docs/posts/#drafts' | relative_url }}">drafts</a>
-    feature tailored specifically for blog posts.
+    预览未发布页面，运行 <code>jekyll serve</code> 或者 <code>jekyll build</code>
+    附带参数 <code>--unpublished</code> 即可。Jekyll 针对博文还有一个更方便的<a href="{{ '/docs/posts/#drafts' | relative_url }}">草稿</a>功能。
   </p>
 </div>
 
-## Custom Variables
+## 自定义变量
 
-You can also set your own front matter variables you can access in Liquid. For
-instance, if you set a variable called `food`, you can use that in your page:
+您还可以在前置参数中设定方便自己在 Liquid 中使用的自定义变量。例如您可以
+设定变量 `food`，然后再页面中使用：
 
 {% raw %}
 ```liquid
@@ -137,16 +119,16 @@ food: Pizza
 ```
 {% endraw %}
 
-## Predefined Variables for Posts
+## 博文预定义变量
 
-These are available out-of-the-box to be used in the front matter for a post.
+还有一些方便博文中使用的变量。
 
 <div class="mobile-side-scroller">
 <table>
   <thead>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <th>变量</th>
+      <th>简介</th>
     </tr>
   </thead>
   <tbody>
@@ -156,10 +138,9 @@ These are available out-of-the-box to be used in the front matter for a post.
       </td>
       <td>
         <p>
-          A date here overrides the date from the name of the post. This can be
-          used to ensure correct sorting of posts. A date is specified in the
-          format <code>YYYY-MM-DD HH:MM:SS +/-TTTT</code>; hours, minutes, seconds, and timezone offset
-          are optional.
+          这里设定的日期会覆盖博文文件名中的日期。本项可用于纠正博文排列顺
+          序。日期指定格式为 <code>YYYY-MM-DD HH:MM:SS +/-TTTT</code>，时、分、
+          秒和时区为可选项。
         </p>
       </td>
     </tr>
@@ -170,14 +151,9 @@ These are available out-of-the-box to be used in the front matter for a post.
       </td>
       <td>
         <p>
-
-          Instead of placing posts inside of folders, you can specify one or
-          more categories that the post belongs to. When the site is generated
-          the post will act as though it had been set with these categories
-          normally. Categories (plural key) can be specified as a <a
-          href="https://en.wikipedia.org/wiki/YAML#Basic_components">YAML list</a> or a
-          space-separated string.
-
+          无需将博文放入文件夹，只要定义一个或多个博文所属分类即可。生成站点
+          时就像博文设置了这些目录一样。分类可定义成 <a
+          href="https://en.wikipedia.org/wiki/YAML#Basic_components">YAML 列表</a>或空格分开的字符串。
         </p>
       </td>
     </tr>
@@ -187,12 +163,9 @@ These are available out-of-the-box to be used in the front matter for a post.
       </td>
       <td>
         <p>
-
-          Similar to categories, one or multiple tags can be added to a post.
-          Also like categories, tags can be specified as a <a
-          href="https://en.wikipedia.org/wiki/YAML#Basic_components">YAML list</a> or a
-          space-separated string.
-
+          同分类一样，一篇博文可添加一个或多个 Tag。同分类相似，Tag 可定义为
+           <a
+          href="https://en.wikipedia.org/wiki/YAML#Basic_components">YAML 列表</a>或空格分割的字符串。
         </p>
       </td>
     </tr>
@@ -201,12 +174,9 @@ These are available out-of-the-box to be used in the front matter for a post.
 </div>
 
 <div class="note">
-  <h5>Don't repeat yourself</h5>
+  <h5>DRY（不要自我重复）</h5>
   <p>
-    If you don't want to repeat your frequently used front matter variables
-    over and over, define
-    <a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}" title="Front Matter defaults">defaults</a>
-    for them and only override them where necessary (or not at all). This works
-    both for predefined and custom variables.
+    如果不想不断重复高频前置参数变量，可以在
+    <a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}" title="Front Matter defaults">默认前置参数</a>中进行设定，必要时再进行覆盖（或者根本不需要）。这种设定在预置参数变量和自定义变量中都可以设定。
   </p>
 </div>

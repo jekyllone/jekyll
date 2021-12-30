@@ -147,29 +147,22 @@ Categories 使用方法同上面的 tags 相似：
 *Categories 和 Tags 相似性到此为止。*
 
 不像 Tags，Categories 也可以通过博文的文件路径定义。`_post` 下的任何目录都可
-被看作目录。例如，如果一篇博文的路径是 `movies/horror/_posts/2019-05-21-bride-of-chucky.markdown`，
-那么 `movies` 和 `horror` 会自动被认定为该篇博文的目录。
+被看作分类。例如，如果一篇博文的路径是 `movies/horror/_posts/2019-05-21-bride-of-chucky.markdown`，
+那么 `movies` 和 `horror` 会自动被认定为该篇博文的分类。
 
-When the post also has front matter defining categories, they just get added to
-the existing list if not present already.
+当博文在前置参数中定义分类后，如果已经有对应分类，则会加入相应列表内。
 
-The hallmark difference between categories and tags is that categories of a post
-may be incorporated into [the generated URL](/docs/permalinks/#global) for the
-post, while tags cannot be.
+分类（category）和标签（tag）之间标志性的区别是分类下的博文可以并入对应
+[URL 路径](/docs/permalinks/#global)，而标签（tag）却不能。
 
-Therefore, depending on whether front matter has `category: classic hollywood`,
-or `categories: classic hollywood`, the example post above would have the URL as
-either
-`movies/horror/classic%20hollywood/2019/05/21/bride-of-chucky.html` or
-`movies/horror/classic/hollywood/2019/05/21/bride-of-chucky.html` respectively.
+所以，不管前置参数是 `category: classic hollywood` 还是 `categories: classic hollywood`，上面的示例 URL 会是
+`movies/horror/classic%20hollywood/2019/05/21/bride-of-chucky.html` 或
+`movies/horror/classic/hollywood/2019/05/21/bride-of-chucky.html` 。
 
 
 ## 博文摘要
 
-You can access a snippet of a posts's content by using `excerpt` variable on a
-post. By default this is the first paragraph of content in the post, however it
-can be customized by setting a `excerpt_separator` variable in front matter or
-`_config.yml`.
+您可以通过使用 `excerpt` 变量访问博文的内容片段。默认片段为内容的第一段。当然，也可以在前置参数或者 `_config.yml` 中使用 `excerpt_separator` 变量定义。
 
 ```markdown
 ---
@@ -183,7 +176,7 @@ Here's another paragraph in the excerpt.
 Out-of-excerpt
 ```
 
-Here's an example of outputting a list of blog posts with an excerpt:
+这是一个输出带有摘要的博文列表示例：
 
 {% raw %}
 ```liquid
@@ -200,9 +193,8 @@ Here's an example of outputting a list of blog posts with an excerpt:
 
 ## 草稿
 
-Drafts are posts without a date in the filename. They're posts you're still
-working on and don't want to publish yet. To get up and running with drafts,
-create a `_drafts` folder in your site's root and create your first draft:
+草稿是文件名中没有日期的博文——一般是还需要编辑或者不想发布的博文。使用草
+稿功能需要在站点根目录创建 `_drafts` 文件夹，然后创建您的第一篇草稿：
 
 ```
 .
@@ -211,7 +203,6 @@ create a `_drafts` folder in your site's root and create your first draft:
 ...
 ```
 
-To preview your site with drafts, run `jekyll serve` or `jekyll build`
-with the `--drafts` switch. Each will be assigned the value modification time
-of the draft file for its date, and thus you will see currently edited drafts
-as the latest posts.
+预览站点草稿，运行 `jekyll serve` 或者 `jekyll build` 带上 `--drafts` 参数开关
+即可。草稿显示时间都是草稿文件最后修改的日期和时间，所以您看到的就是该草稿
+都是按照修改时间顺序显示的博文草稿。
