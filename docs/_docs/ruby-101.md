@@ -20,9 +20,9 @@ Jekyll 就是一个 Gem。很多 Jekyll [插件]({{ '/docs/plugins/' | relative_
 
 ## Gemfile
 
-A `Gemfile` is a list of gems used by your site. Every Jekyll site has a Gemfile in the main folder. 
+一个 `Gemfile` 就是一个站点所需 gem 清单。每个 Jekyll 站点在主文件夹内有一个 Gemfile。
 
-For a simple Jekyll site it might look something like this:
+对于一个极简的 Jekyll 站点而言 Gemfile 看起来这样：
 
 ```ruby
 source "https://rubygems.org"
@@ -37,19 +37,19 @@ end
 
 ## Bundler
 
-[Bundler](https://rubygems.org/gems/bundler) is a gem that installs all gems in your `Gemfile`. 
+[Bundler](https://rubygems.org/gems/bundler) 是一个可以帮助安装 `Gemfile` 中所有 gem 的 gem。 
 
-While you don't have to use `Gemfile` and `bundler`, it is highly recommended as it ensures you're running the same version of Jekyll and its plugins across different environments.
+虽然不是必须使用 `Gemfile` 和 `bundler`，但是必须保证您使用的 Jekyll 和插件在不同的环境下版本一致。
 
-Install Bundler using `gem install bundler`. You only need to install it once, not every time you create a new Jekyll project. 
+安装 Bundler 运行命令 `gem install bundler` 即可。安装只需一次即可，不是每次创建新 Jekyll 项目都要安装。
 
-To install gems in your Gemfile using Bundler, run the following in the directory that has the Gemfile:
+使用 Bundler 安装 Gemfile 中的 gem，在 Gemfile 目录下运行命令：
 
 ```
 bundle install
 bundle exec jekyll serve
 ```
 
-To bypass Bundler if you aren't using a Gemfile, run `jekyll serve`.
+如果不使用 Gemfile，则不必运行 Bundler 相关命令，直接运行 `jekyll serve`。
 
-See [Using Jekyll with Bundler](/tutorials/using-jekyll-with-bundler/) for more information about Bundler in Jekyll and for instructions to get up and running quickly.
+查看[通过 Bundler 使用 Jekyll](/tutorials/using-jekyll-with-bundler/) 获取更多关于 Jekyll 和 Bundler 信息，以便快速掌握。

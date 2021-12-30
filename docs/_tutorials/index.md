@@ -1,10 +1,10 @@
 ---
-title: Tutorials
+title: 教程
 permalink: /tutorials/home/
 redirect_from: /tutorials/index.html
 ---
 
-In contrast to [Docs]({{ '/docs/home/' | relative_url }}), Tutorials provide more detailed, narrative instruction that cover a variety of Jekyll topics and scenarios. Tutorials might contain the following:
+同[文档]({{ '/docs/home/' | relative_url }})相比，教程提供更多细节和覆盖 Jekyll 更多主题和场景的详细说明。教程涵盖：
 
 * Step-by-step processes through particular scenarios or challenges
 * Full walk-throughs using sample data, showing inputs and results from the sample data

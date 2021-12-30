@@ -1,10 +1,10 @@
 ---
-title: Navigation
+title: 导航
 author: tomjoht
 date: 2017-01-24 15:38:17 -0800
 ---
 
-If your Jekyll site has a lot of pages, you might want to create navigation for the pages. Instead of hard-coding navigation links, you can programmatically retrieve a list of pages to build the navigation for your site.
+如果您的 Jekyll 站点有很多页面，可能设置一个页面导航更方便使用。除了硬编码编写一个导航链接外，还可以用程序跟踪页面构建列表。site has a lot of pages, you might want to create navigation for the pages. Instead of hard-coding navigation links, you can programmatically retrieve a list of pages to build the navigation for your site.
 
 Although there's already information about [interacting with data files]({% link _docs/datafiles.md %}) in other Jekyll docs, this tutorial dives into building more robust navigation for your site.
 
