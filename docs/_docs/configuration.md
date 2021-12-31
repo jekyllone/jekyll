@@ -3,17 +3,16 @@ title: 配置
 permalink: /docs/configuration/
 ---
 
-Jekyll gives you a lot of flexibility to customize how it builds your site. These
-options can either be specified in a `_config.yml` or `_config.toml` file placed
-in your site’s root directory, or can be specified as flags for the `jekyll`
-executable in the terminal.
+Jekyll 为您构建站点的方式提供了很大的灵活性。这些选项既可以在站点根目录的
+ `_config.yml` 或 `_config.toml` 文件中设置，也可以作为标记在运行 `jekyll`
+命令时添加使用。
 
-* [Configuration Options]({{ '/docs/configuration/options/' | relative_url }})
-* [Default Configuration]({{ '/docs/configuration/default/' | relative_url }})
-* [Front Matter Defaults]({{ '/docs/configuration/front-matter-defaults/' | relative_url }})
-* [Environments]({{ '/docs/configuration/environments/' | relative_url }})
-* [Markdown Options]({{ '/docs/configuration/markdown/' | relative_url }})
-* [Liquid Options]({{ '/docs/configuration/liquid/' | relative_url }})
-* [Sass/SCSS Options]({{ '/docs/configuration/sass/' | relative_url }})
-* [Webrick Options]({{ '/docs/configuration/webrick/' | relative_url }})
-* [Incremental Regeneration]({{ '/docs/configuration/incremental-regeneration/' | relative_url }})
+* [配置选项]({{ '/docs/configuration/options/' | relative_url }})
+* [默认配置]({{ '/docs/configuration/default/' | relative_url }})
+* [默认前置参数]({{ '/docs/configuration/front-matter-defaults/' | relative_url }})
+* [环境]({{ '/docs/configuration/environments/' | relative_url }})
+* [Markdown 选项]({{ '/docs/configuration/markdown/' | relative_url }})
+* [Liquid 选项]({{ '/docs/configuration/liquid/' | relative_url }})
+* [Sass/SCSS 选项]({{ '/docs/configuration/sass/' | relative_url }})
+* [Webrick 选项]({{ '/docs/configuration/webrick/' | relative_url }})
+* [增量重构]({{ '/docs/configuration/incremental-regeneration/' | relative_url }})

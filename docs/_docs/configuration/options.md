@@ -1,21 +1,21 @@
 ---
-title: Configuration Options
+title: 配置项
 permalink: "/docs/configuration/options/"
 ---
 
-The tables below list the available settings for Jekyll, and the various <code
-class="option">options</code> (specified in the configuration file) and <code
-class="flag">flags</code> (specified on the command-line) that control them.
+下表列出 Jekyll 可用设置和控制其操作的各种<code
+class="option">选项（option）</code>（在配置文件中设定）以及<code
+class="flag">标志（flag)</code>（在命令行中指定）。
 
-### Global Configuration
+### 全局设置
 
 <div class="mobile-side-scroller">
 <table>
   <thead>
     <tr>
-      <th>Setting</th>
+      <th>设置</th>
       <th>
-        <span class="option">Options</span> and <span class="flag">Flags</span>
+        <span class="option">选项（Option）</span>和<span class="flag">标志（Flag）</span>
       </th>
     </tr>
   </thead>
@@ -43,12 +43,11 @@ class="flag">flags</code> (specified on the command-line) that control them.
       <td>
         <p class='name'><strong>Defaults</strong></p>
         <p class='description'>
-            Set defaults for <a href="{{ '/docs/front-matter/' | relative_url }}" title="front matter">front matter</a>
-            variables.
+            为<a href="{{ '/docs/front-matter/' | relative_url }}" title="front matter">前置参数</a>设置默认值变量。
         </p>
       </td>
       <td class='align-center'>
-        <p>see <a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}" title="details">below</a></p>
+        <p>查看<a href="{{ '/docs/configuration/front-matter-defaults/' | relative_url }}" title="details">下表</a></p>
       </td>
     </tr>
   </tbody>
@@ -69,14 +68,14 @@ class="flag">flags</code> (specified on the command-line) that control them.
   </p>
 </div>
 
-### Build Command Options
+### 编译命令选项
 
 <div class="mobile-side-scroller">
 <table>
   <thead>
     <tr>
-      <th>Setting</th>
-      <th><span class="option">Options</span> and <span class="flag">Flags</span></th>
+      <th>设置</th>
+      <th><span class="option">选项（Option）</span>和 <span class="flag">标志（Flag）</span></th>
     </tr>
   </thead>
   <tbody>
@@ -101,7 +100,7 @@ class="flag">flags</code> (specified on the command-line) that control them.
 </table>
 </div>
 
-### Serve Command Options
+### 服务命令选项
 
 In addition to the options below, the `serve` sub-command can accept any of the options
 for the `build` sub-command, which are then applied to the site build which occurs right
@@ -154,7 +153,7 @@ before your site is served.
 </div>
 
 <div class="note warning">
-  <h5>Do not use tabs in configuration files</h5>
+  <h5>配置文件中不要使用 Tab 键</h5>
   <p>
     This will either lead to parsing errors, or Jekyll will revert to the
     default settings. Use spaces instead.
